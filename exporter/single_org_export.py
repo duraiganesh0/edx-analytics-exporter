@@ -84,7 +84,7 @@ def main():
 
     with make_org_directory(general_config) as temp_directory:
         export_org_data(general_config, courses, temp_directory)
-
+        config = None
         for course in courses:
             config = get_config_for_course(general_config, course)
             course_directory = os.path.join(temp_directory, get_filename_safe_course_id(course))
