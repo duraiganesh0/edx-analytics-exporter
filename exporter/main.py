@@ -316,6 +316,8 @@ def get_all_courses(**kwargs):
 
     courses = _find_all_courses(**kwargs)
 
+    log.info('all courses ==> %s', courses)
+
     return courses
 
 
