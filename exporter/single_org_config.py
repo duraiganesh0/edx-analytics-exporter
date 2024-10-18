@@ -51,6 +51,7 @@ def set_config_defaults(config):
     values = config['values']
 
     log.info('config values ===>>', config)
+    log.info('config lms -->>', values.get('lms_config'))
 
     if not values.get('lms_config'):
         values['lms_config'] = '/edx/etc/lms.yml'
