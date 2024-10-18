@@ -56,7 +56,7 @@ log = logging.getLogger(__name__)
 def main():
     general_config = setup(__doc__)
 
-    log.info('general config ==>> %s', general_config)
+    log.info('general config ==>>', general_config)
 
     courses_with_env = get_courses_with_env(general_config)
 
