@@ -20,8 +20,13 @@ def setup(doc, argv=None):
     setup_logging()
 
     log.info('Reading configuration')
+    log.info('program_options ===>>', program_options)
 
-    return _get_config(program_options)
+    config = _get_config(program_options)
+
+    log.info('config ===>>', config)
+
+    return config
 
 
 def _get_config(program_options):
