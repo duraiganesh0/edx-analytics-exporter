@@ -20,7 +20,7 @@ def setup(doc, argv=None):
     setup_logging()
 
     log.info('Reading configuration')
-    log.info('program_options ===>>', program_options)
+    log.info('program_options ===>> %s', program_options)
 
     config = _get_config(program_options)
 
@@ -50,12 +50,12 @@ def set_config_defaults(config):
     """
     values = config['values']
 
-    log.info('config values ===>>', config)
-    log.info('config lms -->>', values.get('lms_config'))
+    log.info('config values ===>> %s', config)
+    log.info('config lms -->> %s', values.get('lms_config'))
 
     if not values.get('lms_config'):
         values['lms_config'] = '/edx/etc/lms.yml'
-        log.info('lms_config ===>>', values['lms_config'])
+        log.info('lms_config ===>> %s', values['lms_config'])
 
     if not values.get('studio_config'):
         values['studio_config'] = '/edx/etc/studio.yml'
