@@ -50,8 +50,11 @@ def set_config_defaults(config):
     """
     values = config['values']
 
+    log.info('config values ===>>', config)
+
     if not values.get('lms_config'):
         values['lms_config'] = '/edx/etc/lms.yml'
+        log.info('lms_config ===>>', values['lms_config'])
 
     if not values.get('studio_config'):
         values['studio_config'] = '/edx/etc/studio.yml'
