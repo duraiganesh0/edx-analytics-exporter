@@ -80,6 +80,8 @@ def main():
     """
     general_config = setup(__doc__)
 
+    log.info('general config ==>>', general_config)
+
     courses = get_courses(general_config)
 
     with make_org_directory(general_config) as temp_directory:
